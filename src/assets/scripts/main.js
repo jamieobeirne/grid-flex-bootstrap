@@ -11,6 +11,6 @@
  */
 
 +( function() {
-  const university = "UOC";
-  console.log(`Hello, ${university}!`);
+  const world = "BCN";
+  console.log(`Hello, ${world}!`);
 } )();

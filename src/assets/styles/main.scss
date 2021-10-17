@@ -1,27 +1,73 @@
 /**
- * Use this file to import partials.
- * Do not include SCSS code in this file.
- */
+*
+*
+*  CONTENTS
+*
+*
+*  1.SETTINGS.............Global and brand variables
+*                         For example: variables. Font, colors,
+*                         definitions, etc. No output.
+*
+*  2.TOOL.................Mixins and functions
+*                         For example: mixins and functions. No output
+*
+*  3.GENERIC..............Ground Zero styles like Normalize.css,
+*                         global box-sizing rules
+*
+*  4.ELEMENTS.............Unclassed HTML elements (type selectors)
+*                         For example: bare HTML elements
+*                         (H1–H6 styles)
+*
+*  5.OBJECTS..............Cosmetic-free design patterns
+*                         class selectors which define undecorated
+*                         design patterns, like the media object
+*                         from OOCSS.
+*
+*  6.COMPONENTS...........Designed components, chunks of UI
+*                         For example: specific UI components.
+*                         Most of the code goes here. Wrapping and
+*                         constraining elements.
+*
+*  7.TRUMPS / UTILITIES...The only place where !important declarations
+*                         will be accepted.The most explicit
+*                         types of rules.
+*
+*
+**/
 
-/**
- * Import variables
- */
+/*------------------------------------*\
+  1. Settings
+\*------------------------------------*/
+@import "settings";
 
-@import "variables";
+/*------------------------------------*\
+  2. Tools
+\*------------------------------------*/
+@import "tools";
+
+/*------------------------------------*\
+  3. Generic
+\*------------------------------------*/
+@import "generic";
+
+/*------------------------------------*\
+  4. Elements
+\*------------------------------------*/
+@import "elements";
+
+/*------------------------------------*\
+  5. Objects
+\*------------------------------------*/
+@import "objects";
+
+/*------------------------------------*\
+  6. Components
+\*------------------------------------*/
+@import "components";
+
+/*------------------------------------*\
+  7. Trumps / Utilities
+\*------------------------------------*/
+@import "trumps";
+
 @import "@fortawesome/fontawesome-free/css/all.css";
-/**
- * Import npm dependencies
- * see: https://v2.parceljs.org/features/module-resolution/
- * see commented examples below
- */
-// @import "some-node-module";
-// @import "@some-company/some-node-module";
-/**
- * Import layouts
- * It's a best practice to use a different partial for each page
- */
-@import "layouts/home";
-
-/**
- * Do NOT include anything else in this file!
- */

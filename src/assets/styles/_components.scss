@@ -1,0 +1,71 @@
+/*------------------------------------*\
+  6.COMPONENTS
+  Designed components, chunks of UI
+  For example: specific UI components.
+  Most of the code. Wrapping and
+  constraining elements.
+\*------------------------------------*/
+
+.class-title {
+  font-family: $font-family-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: $main-green;
+
+  @media (min-width: $mqMinWidth) {
+    font-size: 36px;
+  }
+}
+
+/* Split the screen in half */
+.split {
+  height: 100%;
+  width: 50%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: $main-green;
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color: $main-white;
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the image inside the centered container, if needed */
+.centered img {
+  width: 150px;
+  border-radius: 50%;
+}
+
+/*
+The Components layer is where we begin to style
+recognisable pieces of UI. We're still binding
+onto classes here, so our specificity hasn't yet
+increased. However, this layer is more explicit
+than the last one in that we are now styling explicit,
+designed pieces of the DOM.
+
+We shouldn't find any selectors with a
+lower specificity than one class in this layer.
+This is where the majority of your work will happen
+after initial project set-up. Adding new components and
+features usually makes up the vast majority of development.
+*/

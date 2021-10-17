@@ -1,16 +1,18 @@
 {
-  "name": "uoc-boilerplate",
+  "name": "jamie-obeirne-resume",
   "version": "3.2.0",
   "private": true,
-  "description": "Boilerplate for Advanced HTML/CSS Tools UOC students",
+  "description": "Jamie O'Beirne resume / CV",
   "scripts": {
     "parcel:serve": "parcel src/index.html -p 8123 --target web --open",
     "parcel:build": "parcel build src/index.html --target web --no-source-maps --no-cache",
     "clean": "rimraf dist .cache .cache-loader .parcel-cache",
     "dev": "npm-run-all clean parcel:serve",
-    "build": "npm-run-all clean parcel:build",
-    "test": "echo 'Everything is working as expected ✅\nStart working on your project by running \\033[1mnpm run dev\\033[0m'"
+    "test": "echo 'Everything is working as expected ✅\nStart working on your project by running \\033[1mnpm run dev\\033[0m'",
+    "stylelint": "stylelint src/**/*.scss",
+    "build": "npm-run-all clean stylelint parcel:build"
   },
+
   "web": "dist/index.html",
   "targets": {
     "web": {
@@ -41,9 +43,14 @@
     "postcss-preset-env": "^6.7.0",
     "rimraf": "^3.0.2",
     "sass": "^1.32.5",
-    "sharp": "^0.28.3"
+    "sharp": "^0.28.3",
+    "stylelint": "^13.13.1",
+    "stylelint-config-recommended-scss": "^4.3.0",
+    "stylelint-scss": "^3.21.0",
+    "stylelint-selector-tag-no-without-class": "^2.0.4"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^5.15.4"
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "stylelint-no-unused-selectors": "^1.0.40"
   }
 }

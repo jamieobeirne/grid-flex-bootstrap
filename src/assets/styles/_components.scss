@@ -6,53 +6,115 @@
   constraining elements.
 \*------------------------------------*/
 
-.class-title {
-  font-family: $font-family-serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: $main-green;
+/*------------------------------------*\
+  Body sections
+\*------------------------------------*/
 
-  @media (min-width: $mqMinWidth) {
-    font-size: 36px;
-  }
+.main-body-container {
+  display: flex;
+  height: auto;
 }
-
-/* Split the screen in half */
-.split {
-  height: 100%;
-  width: 50%;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  overflow-x: hidden;
-  padding-top: 20px;
+@media (max-width: $tabletMaxWidth) {
+  .main-body-container {
+    flex-direction: column;
+  }
 }
 
 /* Control the left side */
 .left {
-  left: 0;
   background-color: $main-green;
+  width: 30%;
+  color: $main-white;
+}
+@media (max-width: $tabletMaxWidth) {
+  .left {
+    width: 100%;
+  }
 }
 
 /* Control the right side */
 .right {
-  right: 0;
   background-color: $main-white;
+  width: 70%;
+}
+@media (max-width: $tabletMaxWidth) {
+  .right {
+    width: 100%;
+  }
 }
 
-/* If you want the content centered horizontally and vertically */
 .centered {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  margin-top: $main-top-margin-variable;
 }
 
-/* Style the image inside the centered container, if needed */
 .centered img {
-  width: 150px;
+  width: 160px;
   border-radius: 50%;
+}
+
+.align-inner-right {
+  margin-right: 5em;
+  margin-left: 2em;
+  text-align: left;
+}
+@media (max-width: $phoneMaxWidth) {
+  .align-inner-right {
+    margin-right: 1em;
+    margin-left: 1em;
+  }
+}
+
+.align-inner-left {
+  margin-top: 3em;
+  margin-left: 6em;
+  text-align: left;
+}
+
+@media (max-width: $smallScreenMaxWidth) {
+  .align-inner-left {
+    margin-left: 2em;
+  }
+}
+
+@media (max-width: $tabletMaxWidth) {
+  .align-inner-left {
+    text-align: center;
+    margin-left: 0;
+  }
+}
+
+.programming-list {
+  font-weight: 400;
+  font-size: 1.2em;
+}
+
+.profile-a-link {
+  color: black;
+}
+
+.font-awesome-flex {
+  display: flex;
+}
+@media (max-width: $tabletMaxWidth) {
+  .font-awesome-flex {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.font-awesome-adjust {
+  padding-top: 0.5em;
+  margin-left: 0.3em;
+}
+
+@media (max-width: $tabletMaxWidth) {
+  .font-awesome-adjust {
+    padding-top: 0.05em;
+    margin-left: 0.3em;
+  }
 }
 
 /*

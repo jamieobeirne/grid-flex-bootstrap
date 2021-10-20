@@ -6,6 +6,28 @@
   from OOCSS.
 \*------------------------------------*/
 
+.no-margin-padding {
+  margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+}
+
+.reduce-bottom-margin-padding {
+  margin-bottom: 0.3em;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.block-spacer {
+  margin-bottom: 3em;
+}
+
 /*
 Users of OOCSS will be familiar with the concept
 of objects. This is the first layer in which we

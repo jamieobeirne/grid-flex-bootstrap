@@ -1,14 +1,12 @@
 {
   "extends": "stylelint-config-recommended-scss",
+  "plugins": ["stylelint-itcss"],
   "rules": {
+
             "declaration-no-important":true,
             "no-variable-declaration": true,
-            "at-rule-no-unknown": null,
-            "scss/at-rule-no-unknown": true,
-            "font-size": "1.333em,",
-            "unit-allowed-list": ["em", "rem", "s"],
-            "plugin/no-unused-selectors": true,
-            "plugin/selector-tag-no-without-class": ["div", "span"],
+            "unit-allowed-list": ["em", "rem", "s", "%", "px"]
+
 
   }
 }

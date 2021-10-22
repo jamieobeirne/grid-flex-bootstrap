@@ -3,8 +3,7 @@
   "plugins": ["stylelint-itcss"],
   "rules": {
 
-            "declaration-no-important":true,
-            "no-variable-declaration": true,
+
             "unit-allowed-list": ["em", "rem", "s", "%", "px"]
 
 

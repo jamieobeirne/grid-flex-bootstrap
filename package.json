@@ -51,6 +51,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
+    "create-html": "^4.1.0",
     "stylelint-no-unused-selectors": "^1.0.40"
   }
 }

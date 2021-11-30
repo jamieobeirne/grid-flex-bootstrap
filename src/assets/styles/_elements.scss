@@ -24,52 +24,25 @@ implemented using classes.*/
 h1 {
   font-size: $h1-font-size;
   font-weight: bold;
+  color: white;
 }
 
 h2 {
   font-size: $h2-font-size;
   font-family: $font-family-serif;
-}
-
-h3 {
-  font-size: $h3-font-size;
-  font-family: $font-family-sans-serif;
-  font-weight: bold;
-}
-
-h4 {
-  font-size: $h4-font-size;
-  font-family: $font-family-sans-serif;
-  letter-spacing: 0.1em;
-  font-weight: 400;
-}
-
-h5 {
-  font-size: $h5-font-size;
-  font-family: $font-family-sans-serif;
-  font-weight: 300;
+  color: white;
 }
 
 h6 {
   font-size: $h6-font-size;
   font-family: $font-family-sans-serif;
-  color: $main-grey;
   font-weight: 400;
   letter-spacing: 0.3em;
+  color: white;
 }
 
 p {
   font-size: $p-font-size;
   font-family: $font-family-sans-serif;
-}
-
-a {
-  color: $main-white;
-}
-
-li {
-  font-family: $font-family-sans-serif;
-  font-weight: 300;
-  letter-spacing: 0.02em;
-  margin-bottom: 0.5em;
+  color: white;
 }

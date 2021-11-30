@@ -1,136 +1,115 @@
 /*------------------------------------*\
   6.COMPONENTS
-  Designed components, chunks of UI
-  For example: specific UI components.
-  Most of the code. Wrapping and
-  constraining elements.
+  MOST OF THE CODE GOES HERE.
+
+  Content
+
+  1. Homepage
+  2. Actors-characters Page
+
+
 \*------------------------------------*/
 
 /*------------------------------------*\
-  Body sections
+  1. Homepage
 \*------------------------------------*/
 
-.main-body-container {
-  display: flex;
-  height: auto;
+.homepage-main-wrapper {
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 5em 7em 18em 5em 7em 7em 25em;
+  grid-template-rows: 2em 3em 0.5em 4em 14em 4em 3em 2em 5em;
+  grid-template-areas:
+    ". a a . . . ."
+    ". . . . . . ."
+    ". b . . . . ."
+    ". . . . c . ."
+    ". . . . . . ."
+    ". . . d d d d"
+    ". . . . . . ."
+    ". . . . . . ."
+    ". e f f f f .";
 }
-@media (max-width: $tabletMaxWidth) {
-  .main-body-container {
+
+.presentation-message {
+  grid-area: a;
+  letter-spacing: 0.6em;
+}
+
+.homepage-image-grid {
+  grid-area: b;
+}
+
+.homepage-summary-grid {
+  grid-area: c;
+}
+
+.homepage-main-title {
+  grid-area: d;
+}
+
+.theater-logo-grid {
+  grid-area: e;
+}
+.starring-written-grid {
+  grid-area: f;
+  padding-left: 50px;
+  padding-top: 25px;
+}
+
+.starring-written-grid h6 {
+  padding: 2px 0;
+  margin: 0;
+}
+
+/*flex column for small screens*/
+@media only screen and (max-width: $tabletMaxWidth) {
+  .homepage-main-wrapper {
+    display: flex;
+    align-items: center;
     flex-direction: column;
-  }
-}
-
-/* Control the left side */
-.left {
-  background-color: $main-green;
-  width: 30%;
-  color: $main-white;
-}
-@media (max-width: $tabletMaxWidth) {
-  .left {
     width: 100%;
   }
 }
 
-/* Control the right side */
-.right {
-  background-color: $main-white;
-  width: 70%;
-}
-@media (max-width: $tabletMaxWidth) {
-  .right {
-    width: 100%;
-  }
-}
+/* circular image */
+/*https://www.webfx.com/blog/web-design/circular-images-css/*/
 
-.centered {
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-top: $main-top-margin-variable;
-}
-
-.centered img {
-  width: 160px;
+.homepage-main-image-wrapper {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
   border-radius: 50%;
 }
 
-.align-inner-right {
-  margin-right: 5em;
-  margin-left: 2em;
-  text-align: left;
-}
-@media (max-width: $phoneMaxWidth) {
-  .align-inner-right {
-    margin-right: 1em;
-    margin-left: 1em;
-  }
+.homepage-main-image {
+  width: 100%;
+  height: auto;
+  margin-top: -80px;
 }
 
-.align-inner-left {
-  margin-top: 3em;
-  margin-left: 6em;
-  text-align: left;
+.theater-logo {
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 30px;
 }
 
-@media (max-width: $smallScreenMaxWidth) {
-  .align-inner-left {
-    margin-left: 2em;
-  }
+.fa-theater-masks {
+  color: white;
 }
 
-@media (max-width: $tabletMaxWidth) {
-  .align-inner-left {
-    text-align: center;
-    margin-left: 0;
-  }
-}
-
-.programming-list {
-  font-weight: 400;
-  font-size: 1.2em;
-}
-
-.profile-a-link {
-  color: black;
-}
-
-.font-awesome-flex {
+footer {
+  color: white;
+  margin-top: 40px;
   display: flex;
-}
-@media (max-width: $tabletMaxWidth) {
-  .font-awesome-flex {
-    align-items: center;
-    justify-content: center;
-  }
+  justify-content: center;
 }
 
-.font-awesome-adjust {
-  padding-top: 0.5em;
-  margin-left: 0.3em;
-}
-
-@media (max-width: $tabletMaxWidth) {
-  .font-awesome-adjust {
-    padding-top: 0.05em;
-    margin-left: 0.3em;
-  }
-}
-
-.closing-spacer {
-  margin-bottom: 6em;
-}
-/*
-The Components layer is where we begin to style
-recognisable pieces of UI. We're still binding
-onto classes here, so our specificity hasn't yet
-increased. However, this layer is more explicit
-than the last one in that we are now styling explicit,
-designed pieces of the DOM.
-
-We shouldn't find any selectors with a
-lower specificity than one class in this layer.
-This is where the majority of your work will happen
-after initial project set-up. Adding new components and
-features usually makes up the vast majority of development.
-*/
+/*------------------------------------*\
+  2. Actors-Characters Page
+\*------------------------------------*/
